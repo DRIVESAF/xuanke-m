@@ -3,4 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 自适应
+import 'amfe-flexible'
+
 createApp(App).use(store).use(router).mount('#app')
