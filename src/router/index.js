@@ -13,6 +13,12 @@ const routes = [
     children: [
       {
         // 默认子路由
+        path: '/',
+        name: '',
+        component: () => import('@/views/course/')
+      },
+      {
+        // 默认子路由
         path: '/course',
         name: 'course',
         component: () => import('@/views/course/')
