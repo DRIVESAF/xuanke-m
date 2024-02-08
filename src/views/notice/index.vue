@@ -1,115 +1,105 @@
 <template>
-    <div class="course-container">
+    <div class="notice-container">
+        <van-nav-bar title="公告" />
         <!-- 选课导航栏 -->
-        <van-tabs v-model="active">
-            <van-tab title="全部公告">
-                <!-- 搜索框 -->
-                <van-cell-group inset class="search">
 
-                    <van-button slot="title" icon="search" type="info" class="search-btn">
-                    </van-button>
+        <!-- 已选课程 -->
 
-                </van-cell-group>
-                <!-- /搜索框 -->
-                <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 -->
-                <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 --> <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 --> <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 --> <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 -->
-            </van-tab>
-            <van-tab title="未读公告">
-                <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 -->
-                <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 --> <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 --> <!-- 公告 -->
-                <div class="course-container">
-                    <van-cell-group inset class="course-info">
-                        <van-cell class="base-info" value="" center>
-                            <van-image slot="icon" width="80" height="80" fit="cover"
-                                src="https://img01.yzcdn.cn/vant/cat.jpeg" />
-                            <div class="content">选课公告</div>
-                        </van-cell>
-                    </van-cell-group>
-                </div>
-                <!-- /公告 -->
-            </van-tab>
-        </van-tabs>
-        <!-- /选课导航栏 -->
+        <div class="chosen">
+
+            <!-- 搜索框 -->
+            <van-cell-group inset class="search">
+                <van-field v-model="value1" left-icon="search" placeholder="搜索" />
+            </van-cell-group>
+            <!-- /搜索框 -->
+
+            <!-- 课程 -->
+            <van-cell-group inset>
+                <van-cell>
+                    <div class="icon">
+                        <van-image slot="icon" width="70" height="70" fit="cover"
+                            src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+                    </div>
+                    <div class="ifm">
+                        <span class="c-title">选课通知</span>
+                        <div>
+                            公告内容公告内容公告内容公告内容公告内容公告内容公告内容
+                        </div>
+                        <div class="eye">
+                            <van-icon name="eye-o" />
+                        </div>
+                    </div>
+                </van-cell>
+            </van-cell-group>
+            <!-- /课程 -->
+
+            <!-- 课程 -->
+            <van-cell-group inset>
+                <van-cell>
+                    <div class="icon">
+                        <van-image slot="icon" width="70" height="70" fit="cover"
+                            src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+                    </div>
+                    <div class="ifm">
+                        <span class="c-title">选课通知</span>
+                        <div>
+                            公告内容公告内容公告内容公告内容公告内容公告内容公告内容
+                        </div>
+                        <div class="eye">
+                            <van-icon name="eye" />
+                        </div>
+                    </div>
+                </van-cell>
+            </van-cell-group>
+            <!-- /课程 -->
+
+            <!-- 课程 -->
+            <van-cell-group inset>
+                <van-cell>
+                    <div class="icon">
+                        <van-image slot="icon" width="70" height="70" fit="cover"
+                            src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+                    </div>
+                    <div class="ifm">
+                        <span class="c-title">选课通知</span>
+                        <div>
+                            公告内容公告内容公告内容公告内容公告内容公告内容公告内容
+                        </div>
+                        <div class="eye">
+                            <van-icon name="eye-o" />
+                        </div>
+                    </div>
+                </van-cell>
+            </van-cell-group>
+            <!-- /课程 -->
+
+
+
+            <!-- 课程 -->
+            <van-cell-group inset>
+                <van-cell>
+                    <div class="icon">
+                        <van-image slot="icon" width="70" height="70" fit="cover"
+                            src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg" />
+                    </div>
+                    <div class="ifm">
+                        <span class="c-title">选课通知</span>
+                        <div>
+                            公告内容公告内容公告内容公告内容公告内容公告内容公告内容
+                        </div>
+                        <div class="eye">
+                            <van-icon name="eye" />
+                        </div>
+                    </div>
+                </van-cell>
+            </van-cell-group>
+            <!-- /课程 -->
+
+        </div>
+        <div class="c-course">
+            <van-nav-bar />
+        </div>
+
     </div>
 </template>
   
@@ -129,42 +119,95 @@ export default {
 }
 </script>
 <style lang="less">
-.van-cell__value {
-    text-align: left;
-    display: inline;
-}
+.notice-container {
+    .mine {
+        box-shadow: 5px 5px 5px rgb(188, 188, 188);
+        margin: 0 12px;
+        background: linear-gradient(to bottom right, rgb(150, 202, 255), #1989fa);
+        border-radius: 8px;
+
+        .van-cell {
+            background: linear-gradient(to bottom right, rgb(150, 202, 255), #1989fa);
+        }
+
+        .van-cell-group {
+            background: linear-gradient(to bottom right, rgb(150, 202, 255), #1989fa);
+        }
 
 
-.course-info {
-    background-color: #ffffff;
-}
+    }
+
+    .chosen {
+        margin: 0 12px;
+
+        .van-image {
+            display: block;
+            padding: 10px;
+        }
+
+        .van-image__img {
+            border-radius: 8px;
+        }
+
+        .van-cell-group--inset {
+            margin: 17px 0;
+
+        }
+
+        .icon {
+            transform: scale(1.5);
+        }
 
 
-.van-cell-group {
-    margin: 20px;
-    overflow: visible;
-}
-
-.course-container .search-btn {
-    margin: 10px auto;
-    width: 335px;
-    height: 32px;
-    background-color: #fff;
-    border: 0;
-    display: flex;
-    margin-right: auto
-}
+    }
 
 
-.van-cell {
-    border-radius: 8px;
+    .van-cell__value {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
 
-}
+        .icon {
+            padding: 0 10px;
+        }
 
-.course-container .van-cell-group {
-    background-color: #f7f3f3;
-    padding: 0;
-    margin: 10px;
+        .ifm {
+            padding: 0 20px;
+            text-align: left;
+            color: black;
+
+
+            .c-title {
+                font-weight: bold;
+            }
+
+            .eye {
+                float: right;
+            }
+        }
+    }
+
+    .c-course {
+        .van-nav-bar__content {
+            background-color: #f7f3f3;
+
+            .van-nav-bar__title {
+                margin: 0 21px;
+            }
+        }
+
+    }
+
+    .c-course {
+        .van-nav-bar__content {
+            background-color: #f7f3f3;
+
+            .van-nav-bar__title {
+                margin: 0 21px;
+            }
+        }
+    }
+
 }
 </style>
   

@@ -5,9 +5,9 @@
         <van-cell-group>
             <van-field v-model="user.userId" left-icon="contact-o" placeholder="请输入手机号" />
             <van-field v-model="user.password" left-icon="bag-o" placeholder="请输入密码">
-                <template #button>
+                <!-- <template #button>
                     <van-button size="small" round class="send-btn">获取验证码</van-button>
-                </template>
+                </template> -->
             </van-field>
         </van-cell-group>
         <div class="login-btn-warp">
@@ -70,8 +70,25 @@ export default {
         background-color: #ededed;
     }
 
+    .van-cell-group {
+        margin: 0;
+    }
+
     .login-btn-warp {
-        padding: 0 20px;
+        padding: 16px;
+    }
+
+    .van-nav-bar__content {
+        background-color: #1989fa;
+    }
+
+    .van-icon-arrow-left:before {
+        color: #fff;
+    }
+
+    .van-nav-bar__title {
+        color: #fff;
+        font-family: 'Courier New', Courier, monospace;
     }
 }
 </style>

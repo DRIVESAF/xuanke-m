@@ -3,10 +3,19 @@
   <router-view />
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
+<script lang="ts" setup>
+
+import {
+  Check,
+  Delete,
+  Edit,
+  Message,
+  Search,
+  Star,
+} from '@element-plus/icons-vue'
+// export default {
+//   name: 'App'
+// }
 </script>
 <style lang="less">
 body {
